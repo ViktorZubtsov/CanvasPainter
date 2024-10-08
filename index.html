@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+        .content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <title>CanvasPainter</title>
+</head>
+<body>
+<section class="section">
+    <h1 class="title">CanvasPainter</h1>
+    <article class="panel is-primary">
+        <p id="panelHeading" class="panel-heading">Primary</p>
+        <p id="colorPalette" class="panel-tabs pt-3 pb-3 grid pr-1 pl-1 mb-0">
+            <button id="deafultColor" class="button is-rounded is-link">Color-1</button>
+            <button class="button is-rounded is-primary">Color-2</button>
+            <button class="button is-rounded is-info">Color-3</button>
+            <button class="button is-rounded is-success">Color-4</button>
+            <button class="button is-rounded is-warning">Color-5</button>
+            <button class="button is-rounded is-danger">Color-6</button>
+            <button class="button is-rounded has-background-primary-95">primary-95</button>
+            <button class="button is-rounded has-background-primary-70">primary-70</button>
+            <button class="button is-rounded has-background-primary-30 has-text-primary-on-scheme">primary-30</button>
+            <button class="button is-rounded has-background-primary-00 has-text-primary-on-scheme">primary-00</button>
+            <button id="eraseButton" class="button is-rounded has-background-primary-100">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" id="Capa_1" width="24px" height="24px" viewBox="0 0 360 360" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M348.994,102.946L250.04,3.993c-5.323-5.323-13.954-5.324-19.277,0l-153.7,153.701l118.23,118.23l153.701-153.7    C354.317,116.902,354.317,108.271,348.994,102.946z"/>
+                            <path d="M52.646,182.11l-41.64,41.64c-5.324,5.322-5.324,13.953,0,19.275l98.954,98.957c5.323,5.322,13.954,5.32,19.277,0    l41.639-41.641L52.646,182.11z"/>
+                            <polygon points="150.133,360 341.767,360 341.767,331.949 182.806,331.949   "/>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </p>
+        <p class="panel-tabs pt-3 pb-3">
+            <input class="is-info" type="range" id="brushWidth" min="5" max="50" value="20" />
+        </p>
+        <div class="content">
+            <canvas id="drawingArea" width="800" height="600"></canvas>
+        </div>
+    </article>
+</section>
+</body>
+<script src="script.js"></script>
+</html>
